@@ -1,0 +1,10 @@
+extends ../layout
+
+block scripts
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.js')
+
+block content
+  h1 Hello World!
+  p This is my first attempt at writing processing.
+
+  canvas(data-processing-sources='hello.pde')
