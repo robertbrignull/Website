@@ -1,9 +1,47 @@
 extends layout
 
 block content
+  h3 Web graphics
+  p After working with Raphael.js for a bit I became interested in the different web graphics libraries, both raster and SVG based. So I thought I'd try them all out by making a number of the same small examples in each style to compare their conciseness, ease of writitng, performance and prettiness of outcome.
 
-  div(class='row')
-    div(class='col col_1_of_4')
-      div(class='index-icon-wrapper')
-        a(href='/processingjs.html', class='index-icon-title') Processing.js
-          img(src='/img/processing2-logo.jpg', class='index-icon-img')
+  p The six technologies I'll be testing out are: 
+    a(href='http://www.w3schools.com/html/html5_canvas.asp') raw HTML5 canvas
+    | , 
+    a(href='http://processingjs.org/') Processing.js
+    | , 
+    a(href='http://paperjs.org/') Paper.js
+    | , 
+    a(href='http://raphaeljs.com/') Raphael.js
+    | , 
+    a(href='http://keith-wood.name/svg.html') jQuery SVG
+    | , 
+    a(href='http://snapsvg.io/') Snap.svg
+
+  p Of these, canvas and Processing.js are raster based, Paper.js runs within a canvas but is vector based, and the rest are purely SVG libraries. So clearly they do very different things and for some people not all of them may be appropriate, but what I'm doing is a fair judgement over many test cases on a moden browser to see which is more usable for me overall.
+
+  p You can find below links to each example.
+
+  include examples_list
+
+  table(class='example-table')
+    each example in examples
+      tr
+        td
+          img(src='/img/examples/#{example.shortName}.png', class='example-img')
+        td
+          h3= example.longName
+          p= example.description
+        td
+          ul
+            li
+              a(href='/canvas/#{example.shortName}.html') Canvas
+            li
+              a(href='/processingjs/#{example.shortName}.html') Processing.js
+            li
+              a(href='/paperjs/#{example.shortName}.html') Paper.js
+            li
+              a(href='/raphaeljs/#{example.shortName}.html') Raphael.js
+            li
+              a(href='/jquerysvg/#{example.shortName}.html') jQuery SVG
+            li
+              a(href='/snapsvg/#{example.shortName}.html') Snap.svg
