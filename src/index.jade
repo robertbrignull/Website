@@ -21,27 +21,27 @@ block content
 
   p You can find below links to each example.
 
-  include examples_list
+  include graphics_list
 
   table(class='example-table')
     each example in examples
       tr
         td
-          img(src='/img/examples/#{example.shortName}.png', class='example-img')
+          img(src='/img/graphics/#{example.shortName}.png', class='example-img')
         td
           h3= example.longName
           p= example.description
         td
           ul
             li
-              a(href='/canvas/#{example.shortName}.html') Canvas
+              a(href='/graphics/canvas/#{example.shortName}.html') Canvas
             li
-              a(href='/processingjs/#{example.shortName}.html') Processing.js
+              a(href='/graphics/processingjs/#{example.shortName}.html') Processing.js
             li
-              a(href='/paperjs/#{example.shortName}.html') Paper.js
+              a(href='/graphics/paperjs/#{example.shortName}.html') Paper.js
             li
-              a(href='/raphaeljs/#{example.shortName}.html') Raphael.js
+              a(href='/graphics/raphaeljs/#{example.shortName}.html') Raphael.js
             li
-              a(href='/jquerysvg/#{example.shortName}.html') jQuery SVG
+              a(href='/graphics/jquerysvg/#{example.shortName}.html') jQuery SVG
             li
-              a(href='/snapsvg/#{example.shortName}.html') Snap.svg
+              a(href='/graphics/snapsvg/#{example.shortName}.html') Snap.svg
