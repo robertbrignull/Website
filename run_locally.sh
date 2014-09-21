@@ -1,3 +1,5 @@
 #!/bin/bash
 
-harp server --port 8000 src
+BIN=`npm bin`
+
+$BIN/harp server --port 8000 src

@@ -1,0 +1,13 @@
+{
+    "name": "Website",
+    "version": "0.0.1",
+    "description": "My personal website",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/robertbrignull/Website.git"
+    },
+    "dependencies": {
+        "harp": "0.13.0"
+    }
+}
+
