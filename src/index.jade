@@ -1,47 +1,32 @@
 extends layout
 
+block append css
+  link(rel='stylesheet', href='/css/index.css')
+
 block content
-  h3 Web graphics
-  p After working with Raphael.js for a bit I became interested in the different web graphics libraries, both raster and SVG based. So I thought I'd try them all out by making a number of the same small examples in each style to compare their conciseness, ease of writitng, performance and prettiness of outcome.
+  a(href='/articles/graphics/graphics.html')
+    h3 Web Graphics
+  
+  p In an effort to learn about the different libraries out there and to decide which I feel is best, I've implemented a number of small examples using multiple libraries. I've tried to compare their conciseness, ease of writitng, performance and prettiness of outcome.
 
   p The six technologies I'll be testing out are: 
-    a(href='http://www.w3schools.com/html/html5_canvas.asp') raw HTML5 canvas
-    | , 
-    a(href='http://processingjs.org/') Processing.js
-    | , 
-    a(href='http://paperjs.org/') Paper.js
-    | , 
-    a(href='http://raphaeljs.com/') Raphael.js
-    | , 
-    a(href='http://snapsvg.io/') Snap.svg
-    | , 
-    a(href='http://keith-wood.name/svg.html') jQuery SVG
 
-  p Of these, canvas and Processing.js are raster based, so is Paper.js but it presents a object orientated interface, and then we have Raphael.js, Snap.svg and jQuery.svg which are SVG libraries. So clearly they do very different things and for some people not all of them may be appropriate, but what I'm doing is a fair judgement over many test cases on a moden browser to see which is more usable for me overall.
-
-  p You can find below links to each example.
-
-  include graphics_list
-
-  table(class='example-table')
-    each example in examples
-      tr
-        td
-          img(src='/img/graphics/#{example.shortName}.png', class='example-img')
-        td
-          h3= example.longName
-          p= example.description
-        td
-          ul
-            li
-              a(href='/graphics/canvas/#{example.shortName}.html') Canvas
-            li
-              a(href='/graphics/processingjs/#{example.shortName}.html') Processing.js
-            li
-              a(href='/graphics/paperjs/#{example.shortName}.html') Paper.js
-            li
-              a(href='/graphics/raphaeljs/#{example.shortName}.html') Raphael.js
-            li
-              a(href='/graphics/snapsvg/#{example.shortName}.html') Snap.svg
-            li
-              a(href='/graphics/jquerysvg/#{example.shortName}.html') jQuery SVG
+  div(class='row')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://www.w3schools.com/html/html5_canvas.asp') HTML5 canvas
+        img(src='/img/graphics/HTML5.png')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://processingjs.org/') Processing.js
+        img(src='/img/graphics/processingjs.jpg')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://paperjs.org/') Paper.js
+        img(src='/img/graphics/paper-js.gif')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://raphaeljs.com/') Raphael.js
+        img(src='/img/graphics/raphaeljs.png')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://snapsvg.io/') Snap.svg
+        img(src='/img/graphics/snap.jpg')
+    div(class='col', style='width: 16.6%')
+      a(class='logo', href='http://keith-wood.name/svg.html') jQuery SVG
+        img(src='/img/graphics/jquery.jpg')

@@ -1,0 +1,12 @@
+.logo {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.logo img {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 16px;
+    display: block;
+}

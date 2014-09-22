@@ -54,15 +54,10 @@ html, body {
     text-decoration: underline;
 }
 
-.example-table {
-    width: 100%;
+.row {
+
 }
 
-.example-table tr td {
-    vertical-align: top;
-    padding: 4px;
-}
-
-.example-img {
-    width: 200px;
+.col {
+    float: left;
 }
