@@ -1,4 +1,4 @@
-extends ../../layout
+extends ../../_base
 
 block append css
   link(rel='stylesheet', href='/css/graphics.css')
@@ -32,8 +32,6 @@ block content
   p Of these, canvas and Processing.js are raster based, so is Paper.js but it presents a object orientated interface, and then we have Raphael.js, Snap.svg and jQuery.svg which are SVG libraries. So clearly they do very different things and for some people not all of them may be appropriate, but what I'm doing is a fair judgement over many test cases on a moden browser to see which is more usable for me overall.
 
   p You can find below links to each example.
-
-  include graphics_list
 
   table(class='example-table')
     each example in examples
