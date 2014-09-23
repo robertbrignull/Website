@@ -4,29 +4,40 @@ block append css
   link(rel='stylesheet', href='/css/index.css')
 
 block content
-  a(href='/articles/graphics/graphics.html')
-    h3 Web Graphics
-  
-  p In an effort to learn about the different libraries out there and to decide which I feel is best, I've implemented a number of small examples using multiple libraries. I've tried to compare their conciseness, ease of writitng, performance and prettiness of outcome.
+  div(class='article')
+    a(href='/articles/graphics/graphics.html')
+      h3 Web Graphics
+    
+    p In an effort to learn about the different libraries out there and to decide which I feel is best, I've implemented a number of small examples using multiple libraries. I've tried to compare their conciseness, ease of writitng, performance and prettiness of outcome.
 
-  p The six technologies I'll be testing out are: 
+    p The six technologies I'll be testing out are: 
 
-  div(class='row')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://www.w3schools.com/html/html5_canvas.asp') HTML5 canvas
-        img(src='/img/graphics/HTML5.png')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://processingjs.org/') Processing.js
-        img(src='/img/graphics/processingjs.jpg')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://paperjs.org/') Paper.js
-        img(src='/img/graphics/paper-js.gif')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://raphaeljs.com/') Raphael.js
-        img(src='/img/graphics/raphaeljs.png')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://snapsvg.io/') Snap.svg
-        img(src='/img/graphics/snap.jpg')
-    div(class='col', style='width: 16.6%')
-      a(class='logo', href='http://keith-wood.name/svg.html') jQuery SVG
-        img(src='/img/graphics/jquery.jpg')
+    div(class='row')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://www.w3schools.com/html/html5_canvas.asp') HTML5 canvas
+          img(src='/img/graphics/HTML5.png')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://processingjs.org/') Processing.js
+          img(src='/img/graphics/processingjs.jpg')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://paperjs.org/') Paper.js
+          img(src='/img/graphics/paper-js.gif')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://raphaeljs.com/') Raphael.js
+          img(src='/img/graphics/raphaeljs.png')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://snapsvg.io/') Snap.svg
+          img(src='/img/graphics/snap.jpg')
+      div(class='col', style='width: 16.6%')
+        a(class='logo', href='http://keith-wood.name/svg.html') jQuery SVG
+          img(src='/img/graphics/jquery.jpg')
+
+
+
+  div(class='article')
+    a(href='/articles/passphrase/passphrase.html')
+      h3 Passphrase generator
+
+    p I'm a strong proponant of passphrases. They are both harder to break and easier to remember than traditional passwords, so there's really no argument against them. So to help me in my quest to change all my online passwords to this style, I've made my own generator.
+
+    p This implementation picks four random words from a list of 7512 3-5 letter english words, using suitably secure random number generation. Of course all this is negated by the fact that it's served over unsecure HTTP, but oh well...
