@@ -11,6 +11,12 @@
         "shortName": "matrix",
         "longName": "Falling Matrix text",
         "description": "I've always wanted to try to make some falling text like this. I think it would make a fantastic screensaver. This tests the library's ability to draw a lot of small pieces of text and some minimal processing to generate/animate the falling text."
+      },
+
+      {
+        "shortName": "tank",
+        "longName": "An exotic fish tank",
+        "description": "This is quite a simple test, just some pretty pictures of fish floating around a tank. The only challenge is to make it a pretty as possible. You can however go as far as you want with making it realistic, with bubbles and weeds and animations."
       }
     ]
   }
