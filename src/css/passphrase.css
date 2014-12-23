@@ -15,3 +15,11 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
+
+#options {
+    margin-top: 20px;
+}
+
+.option {
+    padding-left: 40px;
+}

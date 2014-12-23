@@ -1,5 +1,4 @@
 var words = [];
-var wordCount = 4;
 
 var rand = window.crypto || window.msCrypto;
 
@@ -45,12 +44,28 @@ function get(url, callback) {
 }
 
 function generate() {
-    rand_ints = new Int32Array(wordCount);
+    var numwords = document.getElementById('numwordsinput').value;
+    var usecaps = document.getElementById('usecapsinput').checked;
+    var numnums = document.getElementById('numnumsinput').value;
+
+    rand_ints = new Int32Array(numwords);
     rand.getRandomValues(rand_ints);
 
     passphrase = [];
-    for (var i = 0; i < wordCount; i++) {
-        passphrase.push(words[mod(rand_ints[i], words.length)]);
+    for (var i = 0; i < numwords; i++) {
+        var word = words[mod(rand_ints[i], words.length)];
+        if (usecaps) {
+            word = word.charAt(0).toUpperCase() + word.slice(1);
+        }
+        passphrase.push(word);
+    }
+
+    if (numnums > 0) {
+        nums = [];
+        for (var i = 0; i < numnums; i++) {
+            nums.push(Math.floor(Math.random() * 10));
+        }
+        passphrase.push(nums.join(''));
     }
 
     document.getElementById('passphrase').innerHTML = passphrase.join('-');

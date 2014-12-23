@@ -13,9 +13,23 @@ block content
 
   p So to help me I made my own passphrase generator, because why trust somebody else when you can write it yourself? This is going against the normal advice is security of not to try as you'll likely get it wrong, but with something this simple I say why not.
 
-  p This implementation picks four random words from a list of 7512 3-5 letter english words, using suitably secure random number generation. Of course all this is negated by the fact that it's served over unsecure HTTP, but oh well...
+  p This implementation picks as many random words as you want from a list of 7512 3-5 letter english words, using suitably secure random number generation. To fit old fashioned password security guidelines you can then choose to add capital letters or numbers if you wish.
+
+  p Of course some of this security is negated by the fact that it's served over unsecure HTTP, but oh well...
 
   div(class='row')
     div(class='col', style='width: 30%')
       button(id='generate') Generate!
     div(id='passphrase', class='col', style='width: 70%')
+
+  div(id='options')
+    b Options:
+    span(class='option')
+      | Number of words: 
+      input(id='numwordsinput', type='number', min='1', max='9', value='4')
+    span(class='option')
+      | Use capital letters: 
+      input(id='usecapsinput', type='checkbox')
+    span(class='option')
+      | Append how many numbers: 
+      input(id='numnumsinput', type='number', min='0', max='9', value='0')
