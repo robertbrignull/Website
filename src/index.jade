@@ -5,6 +5,26 @@ block append css
 
 block content
   div(class='article')
+    a(href='/articles/passphrase/passphrase.html')
+      h3 Passphrase generator
+
+    p I'm a strong proponant of passphrases. They are both harder to break and easier to remember than traditional passwords, so there's really no argument against them. So to help me in my quest to change all my online passwords to this style, I've made my own generator.
+
+    p This implementation picks four random words from a list of 7512 3-5 letter english words, using suitably secure random number generation. Of course all this is negated by the fact that it's served over unsecure HTTP, but oh well...
+
+
+
+  div(class='article')
+    a(href='/articles/knitting/knitting.html')
+      h3 Knitting
+
+    p I started knitting in the summer of 2014. I found it immediately both fun and relaxing, and you get the satisfaction of making a physical object yourself.
+
+    p I've so far only attempted small projects, because of the time needed, so I've made small stuffed toys for myself and my friends. I think they make fantastic presents for birthdays and christmas, I think people appreciate them because of the ammount of time and care that has gone into them.
+
+
+
+  div(class='article')
     a(href='/articles/graphics/graphics.html')
       h3 Web Graphics
     
@@ -31,13 +51,3 @@ block content
       div(class='col', style='width: 16.6%')
         a(class='logo', href='http://keith-wood.name/svg.html') jQuery SVG
           img(src='/img/graphics/jquery.jpg')
-
-
-
-  div(class='article')
-    a(href='/articles/passphrase/passphrase.html')
-      h3 Passphrase generator
-
-    p I'm a strong proponant of passphrases. They are both harder to break and easier to remember than traditional passwords, so there's really no argument against them. So to help me in my quest to change all my online passwords to this style, I've made my own generator.
-
-    p This implementation picks four random words from a list of 7512 3-5 letter english words, using suitably secure random number generation. Of course all this is negated by the fact that it's served over unsecure HTTP, but oh well...
