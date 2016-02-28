@@ -48,7 +48,7 @@ function generate() {
     var usecaps = document.getElementById('usecapsinput').checked;
     var numnums = document.getElementById('numnumsinput').value;
 
-    rand_ints = new Int32Array(numwords);
+    rand_ints = new Int32Array(parseInt(numwords));
     rand.getRandomValues(rand_ints);
 
     passphrase = [];
