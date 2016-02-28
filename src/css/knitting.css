@@ -3,6 +3,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: 20px;
+    vertical-align: top;
 }
 
 .grid tr.sizing-row td {
