@@ -31,29 +31,6 @@ html, body {
     color: #FFFFFF;
 }
 
-.top-nav {
-    float: right;
-    margin: 0;
-}
-
-.top-nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 40px;
-}
-
-.top-nav li a {
-    height: 24px;
-    line-height: 24px;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.top-nav li a:hover {
-    text-decoration: underline;
-}
-
 .row {
     zoom: 1;
 }
