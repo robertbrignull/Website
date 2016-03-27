@@ -1,6 +1,13 @@
 @import "variables";
 @import "default";
 
+@media (max-width: 800px) {
+    .flexbox > .about-column,
+    .flexbox > .article-column {
+        flex-basis: 100%;
+    }
+}
+
 .about-box {
     background-color: $grey-very-light;
     padding: $standard-margin;

@@ -4,8 +4,8 @@ block append css
   link(rel='stylesheet', href='/css/index.css')
 
 block content
-  div(class='flexbox padded')
-    div
+  div(class='flexbox padded wrap')
+    div(class='about-column')
       div(class='about-box')
         h1(class='margin-below') Welcome
 
@@ -16,7 +16,7 @@ block content
           a(href='/about.html') about page
           | . Otherwise please just have a look around.
 
-    div
+    div(class='article-column')
       div(class='article')
         a(class='article-header', href='/articles/passphrase/passphrase.html')
           h1 Passphrase generator
