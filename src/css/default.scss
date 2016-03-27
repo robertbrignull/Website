@@ -1,0 +1,66 @@
+@import "variables";
+
+*, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    max-width: $max-page-width;
+    margin: 20px auto;
+    padding: 0px;
+
+    @media (max-width: $max-page-width + 40px) {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.header {
+    height: 64px;
+    background: #000033;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.site-name {
+    float: left;
+    height: 64px;
+    line-height: 64px;
+    margin: 0px 20px;
+    font-size: 2em;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.content {
+    @media (max-width: $max-page-width + 40px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.row {
+    zoom: 1;
+}
+
+.row:before, .row:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col {
+    float: left;
+}
