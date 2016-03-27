@@ -4,20 +4,45 @@ block append css
   link(rel='stylesheet', href='/css/index.css')
 
 block content
-  div(class='article')
-    a(href='/articles/passphrase/passphrase.html')
-      h3 Passphrase generator
+  div(class='flexbox padded')
+    div
+      div(class='about-box')
+        h1(class='margin-below') Welcome
 
-    p I'm a strong proponent of passphrases. They are both harder to break and easier to remember than traditional passwords, so there's really no argument against them. So to help me in my quest to change all my online passwords to this style, I've made my own generator.
+        p I would like to take this opportunity to welcome you to my website. I host here some services which I find useful and generally some things I'd like to document.
 
-    p This implementation picks four random words from a list of 7512 3-5 letter english words, using suitably secure random number generation. Of course all this is negated by the fact that it's served over unsecure HTTP, but oh well...
+        p
+          | To find out more about me head over to the 
+          a(href='/about.html') about page
+          | . Otherwise please just have a look around.
+
+    div
+      div(class='article')
+        a(class='article-header', href='/articles/passphrase/passphrase.html')
+          h1 Passphrase generator
+
+        div(class='article-body')
+          div(class='article-image-wrapper')
+            img(class='article-image', src='/img/index/passphrase.png')
+
+          p I'm a strong proponent of passphrases. They are both harder to break and easier to remember than traditional passwords - so there's really no argument against them. To help me in my quest to change all my online passwords to this style I made my own generator and use it myself regularly.
+
+        div(class='article-footer')
+          a(href='/articles/passphrase/passphrase.html') Read more...
 
 
 
-  div(class='article')
-    a(href='/articles/knitting/knitting.html')
-      h3 Knitting
+      div(class='article')
+        a(class='article-header', href='/articles/knitting/knitting.html')
+          h1 Knitting
 
-    p I started knitting in the summer of 2014. I found it immediately both fun and relaxing, and you get the satisfaction of making a physical object yourself.
+        div(class='article-body')
+          div(class='article-image-wrapper')
+            img(class='article-image', src='/img/index/knitting.jpg')
 
-    p I've so far only attempted small projects, because of the time needed, so I've made small stuffed toys for myself and my friends. I think they make fantastic presents for birthdays and christmas, I think people appreciate them because of the ammount of time and care that has gone into them.
+          p I started knitting in the summer of 2014 and I found it immediately both fun and relaxing. I have always enjoyed the satisfaction of making a physical object myself.
+
+          p So far I've only attempted small projects such as stuffed toys and they've made fantastic presents for birthdays and Christmas. I think people appreciate them because of the amount of care that has gone into them.
+
+        div(class='article-footer')
+          a(href='/articles/knitting/knitting.html') Read more...

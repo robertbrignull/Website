@@ -1,18 +1,119 @@
 @import "variables";
 
-*, body {
-    margin: 0px;
-    padding: 0px;
+/***** resets *****/
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
-html, body {
+body {
     width: 100%;
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.no-hover-underline:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    width: 100%;
+}
+
+/***** general theme *****/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1,
+a {
+    color: $green-dark;
+}
+
+.background-blue-dark {
+    background-color: $blue-dark;
+    color: white;
+}
+
+.background-blue-dark a,
+.background-blue-dark h1 {
+    color: white;
+}
+
+p {
+    margin-bottom: $standard-margin;
+}
+
+/***** margins *****/
+
+.margin-below {
+    margin-bottom: $standard-margin;
+}
+
+/***** floating *****/
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.clear-after:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/***** flexbox *****/
+
+.flexbox {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+}
+
+.flexbox > * {
+    flex: 1;
+    position: relative;
+}
+
+.flexbox.wrap {
+    flex-wrap: wrap;
+}
+
+.flexbox.padded {
+    margin-left: -$standard-margin;
+    margin-right: -$standard-margin;
+}
+
+.flexbox.padded > * {
+    padding: $standard-margin;
+}
+
+/***** main body width *****/
+
 .body {
     max-width: $max-page-width;
-    margin: 20px auto;
+    margin: $standard-margin auto;
     padding: 0px;
 
     @media (max-width: $max-page-width + 40px) {
@@ -22,45 +123,65 @@ html, body {
     }
 }
 
-.header {
-    height: 64px;
-    background: #000033;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
-
-.site-name {
-    float: left;
-    height: 64px;
-    line-height: 64px;
-    margin: 0px 20px;
-    font-size: 2em;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.content {
-    @media (max-width: $max-page-width + 40px) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-.row {
-    zoom: 1;
-}
-
-.row:before, .row:after {
-    content: '\0020';
-    display: block;
-    height: 0;
-    overflow: hidden;
-}
-
-.row:after {
+.body:after {
+    content: "";
+    display: table;
     clear: both;
 }
 
-.col {
+/***** header *****/
+
+$header-height: 64px;
+$site-name-font-size: $header-height / 2;
+$header-links-font-size: $header-height / 3;
+
+.header {
+    height: $header-height;
+    margin-bottom: $standard-margin;
+    @extend .background-blue-dark;
+}
+
+.site-name {
+    height: $header-height;
+    line-height: $header-height;
+    margin: 0px $standard-margin;
+    font-size: $site-name-font-size;
+    @extend .no-hover-underline;
+}
+
+.header-links {
+    float: right;
+    list-style-type: none;
+    font-size: $header-links-font-size;
+    line-height: $header-links-font-size;
+    height: $header-links-font-size;
+    margin-top: ($header-height - $header-links-font-size) / 2;
+}
+
+.header-links:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-links > li {
     float: left;
+    padding-left: $standard-margin;
+    padding-right: $standard-margin;
+    border-right: 2px solid white;
+}
+
+.header-links > li:last-child {
+    border-right: 0;
+}
+
+/***** main content *****/
+
+.content {
+    margin-bottom: $standard-margin;
+
+    @media (max-width: $max-page-width + 40px) {
+        padding-left: $standard-margin;
+        padding-right: $standard-margin;
+    }
 }

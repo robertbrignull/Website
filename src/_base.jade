@@ -13,13 +13,25 @@ html(lang='en')
         | Brignull.co.uk
 
     block css
-      link(rel='stylesheet', href='/css/default.css')
+      block css-fonts
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+
+      block css-lib
+
+      block css-ours
+        link(rel='stylesheet', href='/css/default.css')
       
   body
     div(class='body')
       block header
         div(class='header')
           a(class='site-name', href='/') Brignull.co.uk
+
+          ul(class='header-links')
+            li
+              a(href='/') home
+            li
+              a(href='/about.html') about
 
       div(class='content')
         block content

@@ -1,10 +1,32 @@
+@import "variables";
+@import "default";
+
+#output-line {
+    margin-bottom: $standard-margin;
+}
+
+#generate,
+#passphrase,
+#numwordsinputwrapper,
+#usecapsinputwrapper,
+#numnumsinputwrapper {
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+$button-min-width: 150px;
+$output-min-width: 500px;
+
 #generate {
-    width: 100%;
+    min-width: $button-min-width;
+    max-width: 300px;
     height: 48px;
     font-size: 24px;
 }
 
 #passphrase {
+    min-width: $output-min-width;
+    max-width: 700px;
     height: 48px;
     font-size: 40px;
     line-height: 42px;
@@ -16,10 +38,34 @@
     -ms-box-sizing: border-box;
 }
 
-#options {
-    margin-top: 20px;
+@media (max-width: $button-min-width + $output-min-width + $standard-margin * 2) {
+    #generate {
+        min-width: inherit;
+        max-width: inherit;
+        flex-basis: 100%;
+    }
+
+    #passphrase {
+        min-width: inherit;
+        max-width: inherit;
+        flex-basis: 100%;
+    }
 }
 
-.option {
-    padding-left: 40px;
+@media (max-width: $output-min-width + $standard-margin * 2) {
+    #passphrase {
+        font-size: 24px;
+    }
+}
+
+#numwordsinputwrapper {
+    min-width: 210px;
+}
+
+#usecapsinputwrapper {
+    min-width: 160px;
+}
+
+#numnumsinputwrapper {
+    min-width: 280px;
 }

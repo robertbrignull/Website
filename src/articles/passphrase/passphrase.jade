@@ -7,7 +7,7 @@ block append scripts
   script(src='/articles/passphrase/passphrase.js')
 
 block content
-  h3 Passphrase generator
+  h1(class='margin-below') Passphrase generator
 
   p I'm a strong proponant of passphrases, eg: case-knee-bat-grape. In almost every sense they are far better than passwords made from 6-8 hard to remember symbols, eg: a6h%S\9F. They are both stronger and so harder for computers to crack, and easier to remember by humans. Their strength comes from their length which gives then a high entropy. If you tried to naively brute force one there would be 26^16 = 4.4x10^22 possibilities, and even if you know it's made from four short words then there are still 7000^4 = 2.4x10^15 possibilities.
 
@@ -17,19 +17,17 @@ block content
 
   p Of course some of this security is negated by the fact that it's served over unsecure HTTP, but oh well...
 
-  div(class='row')
-    div(class='col', style='width: 30%')
-      button(id='generate') Generate!
-    div(id='passphrase', class='col', style='width: 70%')
+  div(id='output-line', class='flexbox wrap')
+    button(id='generate') Generate!
+    div(id='passphrase', class='output-label')
 
-  div(id='options')
-    b Options:
-    span(class='option')
+  div(class='flexbox wrap')
+    div(id='numwordsinputwrapper')
       | Number of words: 
       input(id='numwordsinput', type='number', min='1', max='9', value='4')
-    span(class='option')
+    div(id='usecapsinputwrapper')
       | Use capital letters: 
       input(id='usecapsinput', type='checkbox')
-    span(class='option')
+    div(id='numnumsinputwrapper')
       | Append how many numbers: 
       input(id='numnumsinput', type='number', min='0', max='9', value='0')

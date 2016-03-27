@@ -1,16 +1,32 @@
-.logo {
-    width: 100%;
-    display: block;
-    text-align: center;
-}
+@import "variables";
+@import "default";
 
-.logo img {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 16px;
-    display: block;
+.about-box {
+    background-color: $grey-very-light;
+    padding: $standard-margin;
+    box-shadow: -4px 4px 4px $grey-light;
 }
 
 .article {
-    margin-bottom: 100px;
+    margin-bottom: $standard-margin * 3;
+}
+
+.article-header {
+    display: block;
+    padding: ($standard-margin * 0.6) $standard-margin;
+    @extend .background-blue-dark;
+    @extend .no-hover-underline;
+}
+
+.article-body {
+    padding: 0px $standard-margin;
+}
+
+.article-image-wrapper {
+    padding: $standard-margin / 2;
+}
+
+.article-footer {
+    text-align: right;
+    font-size: 24px;
 }
