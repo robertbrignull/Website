@@ -1,0 +1,24 @@
+.grid tr td {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.grid tr.sizing-row td {
+  height: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
+  padding: 5px 10px 5px 10px;
+}
