@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "variables";
 
 /***** resets *****/
@@ -132,8 +134,8 @@ p {
 /***** header *****/
 
 $header-height: 64px;
-$site-name-font-size: $header-height / 2;
-$header-links-font-size: $header-height / 3;
+$site-name-font-size: math.div($header-height, 2);
+$header-links-font-size: math.div($header-height, 3);
 
 .header {
     height: $header-height;
@@ -155,7 +157,7 @@ $header-links-font-size: $header-height / 3;
     font-size: $header-links-font-size;
     line-height: $header-links-font-size;
     height: $header-links-font-size;
-    margin-top: ($header-height - $header-links-font-size) / 2;
+    margin-top: math.div($header-height - $header-links-font-size, 2);
 }
 
 .header-links:after {

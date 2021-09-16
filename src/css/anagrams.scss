@@ -1,0 +1,30 @@
+@import "variables";
+@import "default";
+
+#input-line {
+    margin-bottom: $standard-margin;
+}
+
+$button-min-width: 150px;
+$input-min-width: 500px;
+
+#input-word {
+    min-width: $input-min-width;
+    max-width: 700px;
+    height: 48px;
+    font-size: 40px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+#solve {
+    min-width: $button-min-width;
+    max-width: 300px;
+    height: 48px;
+    font-size: 24px;
+}
