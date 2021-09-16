@@ -5,7 +5,7 @@ const pug = require('pug');
 const sass = require('sass');
 
 const srcDir = 'src';
-const outDir = 'build';
+const outDir = '_build';
 
 // Recreate the output directory
 fs.rmdirSync(outDir, { recursive: true, force: true });

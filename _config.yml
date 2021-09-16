@@ -1,0 +1,6 @@
+collections:
+   build:
+     output: true
+     permalink: /:path/
+
+include: [data, img]
