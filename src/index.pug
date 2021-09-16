@@ -1,7 +1,7 @@
 extends _base
 
 block append css
-  link(rel='stylesheet', href='index.css')
+  link(rel='stylesheet', href='/index.css')
 
 block content
   div(class='flexbox padded wrap')
@@ -16,46 +16,33 @@ block content
           a(href='/about.html') about page
           | . Otherwise please just have a look around.
 
-      div(class='article')
-        a(class='article-header', href='/articles/anagrams/anagrams.html')
-          h1 Anagram solver
-
-        div(class='article-body')
-          div(class='article-image-wrapper')
-            img(class='article-image', src='/img/index/anagrams.png')
-
-          p For fun here is an anagram solver, as sometimes you just need to solve anagrams and it'll be useful to have such a service at my fingertips wherever I go. It works efficiently in logarithmic time in the size of the dictionay used.
-
-        div(class='article-footer')
-          a(href='/articles/anagrams/anagrams.html') Read more...
-
     div(class='article-column')
       div(class='article')
-        a(class='article-header', href='/articles/passphrase/passphrase.html')
+        a(class='article-header', href='/passphrase')
           h1 Passphrase generator
 
         div(class='article-body')
           div(class='article-image-wrapper')
-            img(class='article-image', src='/img/index/passphrase.png')
+            img(class='article-image', src='/data/index/passphrase.png')
 
           p I'm a strong proponent of passphrases. They are both harder to break and easier to remember than traditional passwords - so there's really no argument against them. To help me in my quest to change all my online passwords to this style I made my own generator and use it myself regularly.
 
         div(class='article-footer')
-          a(href='/articles/passphrase/passphrase.html') Read more...
+          a(href='/passphrase') Read more...
 
 
 
       div(class='article')
-        a(class='article-header', href='/articles/knitting/knitting.html')
+        a(class='article-header', href='/knitting')
           h1 Knitting
 
         div(class='article-body')
           div(class='article-image-wrapper')
-            img(class='article-image', src='/img/index/knitting.jpg')
+            img(class='article-image', src='/data/index/knitting.jpg')
 
           p I started knitting in the summer of 2014 and I found it immediately both fun and relaxing. I have always enjoyed the satisfaction of making a physical object myself.
 
           p So far I've only attempted small projects such as stuffed toys and they've made fantastic presents for birthdays and Christmas. I think people appreciate them because of the amount of care that has gone into them.
 
         div(class='article-footer')
-          a(href='/articles/knitting/knitting.html') Read more...
+          a(href='/knitting') Read more...
