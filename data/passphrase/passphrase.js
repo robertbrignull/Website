@@ -19,7 +19,7 @@ addEvent(window, 'load', function() {
 });
 
 function loadWords(callback) {
-    get("/data/passphrase/words.txt", function(status, response) {
+    get("../data/passphrase/words.txt", function(status, response) {
         if (status == 200) {
             words = response.split('\n');
             callback();
