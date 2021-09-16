@@ -9,13 +9,13 @@ block append scripts
 block content
   h1(class='margin-below') Passphrase generator
 
-  p I'm a strong proponant of passphrases, eg: case-knee-bat-grape. In almost every sense they are far better than passwords made from 6-8 hard to remember symbols, eg: a6h%S\9F. They are both stronger and so harder for computers to crack, and easier to remember by humans. Their strength comes from their length which gives then a high entropy. If you tried to naively brute force one there would be 26^16 = 4.4x10^22 possibilities, and even if you know it's made from four short words then there are still 7000^4 = 2.4x10^15 possibilities.
+  p Passphrases (eg: case-knee-bat-grape) are great. In almost every sense they are far better than passwords made from 6-8 hard to remember symbols, eg: a6h%S\9F. They are both stronger and so harder for computers to crack, and easier to remember by humans. Their strength comes from their length which gives then a high entropy.
 
-  p So to help me I made my own passphrase generator, because why trust somebody else when you can write it yourself? This is going against the normal advice is security of not to try as you'll likely get it wrong, but with something this simple I say why not.
+  p So to help me I made my own passphrase generator. This is going against the normal advice in security that that it's dangerous to implement things yourself as you may get it wrong, but for something as simple as this it's fine.
 
-  p This implementation picks as many random words as you want from a list of 7512 3-5 letter english words, using suitably secure random number generation. To fit old fashioned password security guidelines you can then choose to add capital letters or numbers if you wish.
-
-  p Of course some of this security is negated by the fact that it's served over unsecure HTTP, but oh well...
+  p This implementation picks as many random words as you want from a list of 7512 3-5 letter english words. The addition of capital letters and trailing numbers is optional but is enabled by default.
+  
+  p The minimum length of a passphrase generated with the default settings is 20 characters and uses a large range of characters, so if you tried to naively brute force one there would be 63^20 = 2^120 possibilitie. Even if you know the format then there are still 7512^4 * 10000 = 2^64 possibilities.
 
   div(id='output-line', class='flexbox wrap')
     button(id='generate') Generate!
@@ -27,7 +27,7 @@ block content
       input(id='numwordsinput', type='number', min='1', max='9', value='4')
     div(id='usecapsinputwrapper')
       | Use capital letters: 
-      input(id='usecapsinput', type='checkbox')
+      input(id='usecapsinput', type='checkbox', checked)
     div(id='numnumsinputwrapper')
       | Append how many numbers: 
-      input(id='numnumsinput', type='number', min='0', max='9', value='0')
+      input(id='numnumsinput', type='number', min='0', max='9', value='4')
